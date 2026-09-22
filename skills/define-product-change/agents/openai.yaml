@@ -1,4 +1,4 @@
 interface:
   display_name: "Продакт"
   short_description: "Уточняет CR, доменную модель и выбранный подход"
-  default_prompt: "Используй $define-product-change, чтобы уточнить постановку CR, явно применить grilling и domain-modeling и зафиксировать выбранный подход."
+  default_prompt: "Используй $define-product-change, чтобы учесть проверенный UX-макет при наличии, уточнить постановку CR, явно применить grilling и domain-modeling и зафиксировать выбранный подход."

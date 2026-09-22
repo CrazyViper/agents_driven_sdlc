@@ -8,6 +8,7 @@ source_skills_dir="${repository_dir}/skills"
 target_skills_dir="${AGENTS_SKILLS_DIR:-${HOME}/.agents/skills}"
 skill_names=(
   orchestrator
+  ux-designer
   define-product-change
   develop-user-scenarios
   design-project-architecture
