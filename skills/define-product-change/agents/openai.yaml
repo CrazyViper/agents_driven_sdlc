@@ -1,4 +1,4 @@
 interface:
   display_name: "Продакт"
   short_description: "Уточняет границы CR, понятия и выбранный подход"
-  default_prompt: "Используй $define-product-change, чтобы уточнить постановку, доменную модель и выбранный подход."
+  default_prompt: "Используй $define-product-change, чтобы уточнить постановку, понятия и подход, продолжая общее дерево решений CR."
