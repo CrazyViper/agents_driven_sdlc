@@ -8,7 +8,9 @@ Communication and generated documents follow the language specified by the user'
 
 ## Quick Start
 
-You need Git, Bash, and a configured local Codex with subagent support. Check that the models in the [orchestrator settings](skills/orchestrator/SKILL.md#prepare-the-work) are available. UI work uses `visualize` and `modern-web-guidance`.
+You need Git, Bash, and a configured local Codex with subagent support. Check that the models in the [orchestrator settings](skills/orchestrator/SKILL.md#prepare-the-work) are available.
+
+Recommended for UI work: `visualize` by OpenAI for inline previews, and [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance) for current web guidance. These optional skills are not installed by this bundle; without them, the designer uses a local interactive preview and current official platform documentation.
 
 This quick start installs the current `main` branch.
 

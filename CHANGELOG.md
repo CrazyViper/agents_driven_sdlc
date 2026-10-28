@@ -10,6 +10,8 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 - Moved shared storage rules into a separate reference: current materials for each CR are stored in a folder named with its identifier and short title. Temporary reports and diagnostics are stored outside the project tree and are not included in Git or permanent documents.
 - The CR summary links only to the main current documents. Run results are shared temporarily with participants and removed after dependent reviews; documents retain brief verification summaries.
 - Translated all tracked documentation, skill instructions, references, metadata, and installer messages into English. Communication and generated documents follow the language specified by the user's request and project rules.
+- Made `visualize` and `modern-web-guidance` recommended UX dependencies, with local interactive previews and official documentation as alternatives. Missing helper skills do not block the workflow; prototype checks and explicit user approval remain required.
+- Set all default subagent launches, including mediation, to `gpt-6.1-sol` with `xhigh` reasoning effort.
 
 ### Migrating to Copied Installation
 

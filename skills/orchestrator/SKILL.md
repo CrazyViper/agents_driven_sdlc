@@ -20,10 +20,10 @@ Default launch settings:
 
 | Participant | Type | Model | Reasoning Effort |
 | --- | --- | --- | --- |
-| Package authors and solution reviewer | `default` | `gpt-6-astra` | `xhigh` |
-| Implementer | `worker` | `gpt-6-astra` | `xhigh` |
-| Code reviewer | `default` | `gpt-6-astra` | `xhigh` |
-| Mediator | `default` | The parties' model | One supported level above the highest effort used by the parties |
+| Package authors and solution reviewer | `default` | `gpt-6.1-sol` | `xhigh` |
+| Implementer | `worker` | `gpt-6.1-sol` | `xhigh` |
+| Code reviewer | `default` | `gpt-6.1-sol` | `xhigh` |
+| Mediator | `default` | `gpt-6.1-sol` | `xhigh` |
 
 Launch participants with `fork_turns: none`, respecting explicit user settings. Resolve unavailable or ambiguous launch parameters with the user without silently substituting them.
 
