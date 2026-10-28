@@ -1,7 +1,8 @@
 # agents_driven_sdlc
 
-Nine Codex skills for designing and implementing changes to a software product.
-A shared CR (change request) connects the roles' outputs. The project's `AGENTS.md` and documentation define its specific rules.
+A bundle of skills for the full software development lifecycle (SDLC): from refining an idea through creating interactive prototypes and designing the architecture to writing code, adding test coverage, and reviewing the complete set of changes.
+
+Each cycle focuses on a single product change, documented in a CR (change request) package.
 
 Communication and generated documents follow the language specified by the user's request and project rules.
 
