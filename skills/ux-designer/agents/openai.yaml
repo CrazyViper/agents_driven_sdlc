@@ -1,4 +1,4 @@
 interface:
-  display_name: "UX-дизайнер"
-  short_description: "Готовит интерактивный макет для проверки пользователем"
-  default_prompt: "Используй $ux-designer, чтобы подготовить и проверить макет, сохраняя решения в общем дереве CR."
+  display_name: "UX Designer"
+  short_description: "Prepares an interactive prototype for user verification"
+  default_prompt: "Use $ux-designer to prepare and check a prototype while preserving decisions in the shared CR tree."

@@ -1,5 +1,5 @@
-# Хранение материалов CR
+# Storing CR Materials
 
-1. Актуальные материалы одного CR храни в отдельной папке с идентификатором и кратким названием этого CR внутри принятого проектом каталога изменений. В неё складывай основные документы CR с принятыми решениями, актуальный макет и используемые в документах иллюстрации и схемы; общие канонические материалы связывай ссылками без копирования.
-2. Файлы результатов прогонов, промежуточную диагностику и временные отчёты участников храни в системном временном каталоге вне дерева проекта. Не добавляй их в систему контроля версий и постоянный пакет CR; не вставляй в постоянные документы сырые результаты или ссылки на временные файлы.
-3. Передавай временные результаты участникам в сообщениях и сохраняй их до завершения зависимого ревью или разбора, затем удаляй свои временные файлы. В основном документе сохраняй краткий итог проверки: проверенную версию, команды, результат и существенные ограничения.
+1. Store the current materials for each CR in a separate folder named with its identifier and short title within the project's established changes directory. Keep the main CR documents with accepted decisions, the current prototype, and illustrations and diagrams used in the documents there; link shared canonical materials without copying them.
+2. Store run result files, intermediate diagnostics, and participants' temporary reports in the system temporary directory outside the project tree. Do not add them to version control or the permanent CR package; do not embed raw results or links to temporary files in permanent documents.
+3. Share temporary results with participants in messages and retain them until the dependent review or investigation is complete, then remove your temporary files. Keep a brief verification summary in the main document: the version checked, commands, result, and material limitations.

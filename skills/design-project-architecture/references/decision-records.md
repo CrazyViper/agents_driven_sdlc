@@ -1,7 +1,7 @@
-# Запись архитектурного решения
+# Recording an Architectural Decision
 
-Применяй для труднообратимого решения, причины которого важно сохранить.
+Use this for a decision that is hard to reverse and whose rationale needs to be preserved.
 
-1. Отдельная запись нужна, только если пересмотр дорог, решение неочевидно без контекста и были содержательные альтернативы. Иначе достаточно основания в текущем документе.
-2. Используй принятое в проекте место и формат; не создавай каталог ADR заранее. Начни с короткого абзаца о контексте, решении и причине, добавляя детали только при необходимости.
-3. Свяжи запись с CR и относящимися решениями без повторного согласования уже принятого. Явно отмечай замену прежнего решения и сохраняй основание изменения.
+1. A separate record is needed only if revision is costly, the decision is not obvious without context, and there were meaningful alternatives. Otherwise, rationale in the current document is sufficient.
+2. Use the project's established location and format; do not create an ADR directory in advance. Start with a short paragraph describing the context, decision, and reason, adding details only when needed.
+3. Link the record to the CR and related decisions without seeking approval again for what has already been accepted. Explicitly mark when a previous decision is superseded and preserve the reason for the change.

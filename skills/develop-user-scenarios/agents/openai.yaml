@@ -1,4 +1,4 @@
 interface:
-  display_name: "Аналитик сценариев и требований"
-  short_description: "Описывает сценарии и проверяемые требования"
-  default_prompt: "Используй $develop-user-scenarios, чтобы описать пользовательские сценарии и проверяемые ФТ/НФТ."
+  display_name: "Scenario and Requirements Analyst"
+  short_description: "Describes scenarios and verifiable requirements"
+  default_prompt: "Use $develop-user-scenarios to describe user scenarios and verifiable functional and non-functional requirements."

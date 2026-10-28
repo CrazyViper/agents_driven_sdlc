@@ -1,4 +1,4 @@
 interface:
-  display_name: "Ревьюер решения"
-  short_description: "Проверяет полный пакет CR и готовность к утверждению"
-  default_prompt: "Используй $review-solution, чтобы проверить полный пакет CR с планом и дать обоснованный вердикт."
+  display_name: "Solution Reviewer"
+  short_description: "Checks the full CR package and its readiness for approval"
+  default_prompt: "Use $review-solution to review the full CR package with its plan and provide a reasoned verdict."

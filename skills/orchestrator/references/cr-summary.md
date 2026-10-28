@@ -1,16 +1,16 @@
-# Сводка CR для согласования плана
+# CR Summary for Plan Approval
 
-Сохрани сводку по [правилам хранения материалов](material-storage.md) и добавь ссылку на неё в CR. Используй следующие разделы в указанном порядке и нумеруй все списки.
+Save the summary under the [material storage rules](material-storage.md) and link it from the CR. Use the following sections in this order and number all lists.
 
-1. **Цель:** одним коротким предложением объясни, какую задачу решает CR.
-2. **Результат:** опиши результирующее поведение и появляющиеся граничные условия и ограничения минимально необходимым количеством коротких пунктов. Если интерфейс меняется, вставь в этот раздел перед списком результатов одно изображение нового макета с явно отмеченными местами изменений.
-3. **Изменения:** составь лаконичный, но полный вложенный нумерованный список: репозиторий, компонент, изменение. Для каждого изменения опиши суть одним коротким и емким предложением. Единственное изменение компонента можно записать после его названия и двоеточия.
-4. **Этапы:** повтори те же формулировки изменений во вложенном нумерованном списке: этап, компонент, изменение. Сверь состав обоих перечней изменений.
-5. **Ключевые схемы:** покажи обзорную схему и диаграммы с обозначенными изменениями, без схемы этапов.
-6. **Артефакты:** заверши сводку относительными ссылками только на основные актуальные документы CR. Не перечисляй вспомогательные файлы и материалы прогонов в сводке.
+1. **Goal:** explain in one short sentence what problem the CR addresses.
+2. **Outcome:** describe the resulting behavior and any new boundary conditions and constraints in the minimum necessary number of short items. If the interface changes, insert one image of the new prototype with the changed areas clearly marked in this section before the outcome list.
+3. **Changes:** create a concise but complete nested numbered list: repository, component, change. Describe the substance of each change in one short, informative sentence. A component's only change may be written after its name and a colon.
+4. **Stages:** repeat the same change wording in a nested numbered list: stage, component, change. Check that both lists contain the same changes.
+5. **Key diagrams:** show an overview diagram and diagrams with changes marked, without a stage diagram.
+6. **Artifacts:** end the summary with relative links only to the main current CR documents. Do not list supporting files or run materials in the summary.
 
-## Требования к тексту сводки
+## Summary Writing Requirements
 
-1. Пиши простым языком, понятным архитектору и владельцу продукта.
-2. Каждое предложение должно выражать конкретную мысль и иметь самостоятельную ценность.
-3. Не используй перечисления существительных или действий через запятую.
+1. Use plain language that an architect and a product owner can understand.
+2. Each sentence must express a concrete idea and have value on its own.
+3. Do not use comma-separated lists of nouns or actions.

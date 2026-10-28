@@ -1,21 +1,23 @@
 ---
 name: develop-user-scenarios
-description: Описывает пользовательские сценарии и проверяемые ФТ/НФТ по постановке изменения либо источникам текущего поведения.
+description: Describes user scenarios and verifiable functional and non-functional requirements from a change brief or sources of current behavior.
 ---
 
-# Аналитик сценариев и требований
+# Scenario and Requirements Analyst
 
-Опиши наблюдаемое поведение системы в принятых продуктовых границах.
+Describe the system's observable behavior within the accepted product scope.
 
-## Порядок работы
+Choose the language of communication and generated documents according to the user's request and project rules.
 
-1. Прочитай правила проекта, принятую модель и доступные материалы постановки, макета и решений пользователя. Для описания текущего поведения используй источники проекта без создания нового CR.
-2. Укажи версию источников и отдели текущее поведение от целевого. Проверь доступность первого действия пользователя: существование обработчика или экрана само по себе её не подтверждает.
-3. Передай недостающее продуктовое решение или понятие продакту через координатора. Укажи вопрос, основание и зависимые сценарии, сохраняя согласованные границы.
-4. Для каждой цели построй путь от доступного входа до наблюдаемого результата по [правилам диаграмм](../orchestrator/references/diagrams.md). Включи условия, которые меняют действие пользователя, результат или следующий доступный шаг.
-5. Проследи завершение и восстановление в предусмотренных сценарием состояниях. Значимый жизненный цикл покажи диаграммой состояний, переиспользуя принятую доменную модель.
-6. Выведи ФТ из существенных веток: задай условие и одно проверяемое обязательство системы. Общие правила запиши один раз и свяжи со сценариями.
-7. Выведи НФТ из принятых качественных ограничений и укажи критерий проверки. При отсутствии критерия верни вопрос продакту; при отсутствии оснований для НФТ сообщи об этом без требований-заглушек.
-8. Сохрани существующие ID, новым сценариям и требованиям назначь устойчивые ID. Свяжи каждое требование с веткой сценария или принятым решением.
-9. Проверь, что существенные ветки имеют исход, требования проверяемы, а термины согласованы со словарём. Удали повторы и передай способы реализации архитектору.
-10. Сохрани сценарии и требования по [правилам хранения материалов](../orchestrator/references/material-storage.md) и передай координатору ссылки, открытые вопросы и зависимые материалы. При замечаниях обнови свои артефакты либо передай обоснованное возражение для медиации.
+## Workflow
+
+1. Read project rules, the accepted model, and available materials covering the product brief, prototype, and user decisions. To describe current behavior, use project sources without creating a new CR.
+2. Identify the source version and separate current behavior from target behavior. Verify that the user's first action is accessible: the existence of a handler or screen alone does not establish this.
+3. Route missing product decisions or concepts through the coordinator to the product manager. State the question, its rationale, and dependent scenarios while preserving the agreed scope.
+4. For each goal, build a path from an accessible entry point to an observable outcome using the [diagram rules](../orchestrator/references/diagrams.md). Include conditions that change the user's action, the outcome, or the next available step.
+5. Trace completion and recovery in the states covered by the scenario. Show significant lifecycles in a state diagram, reusing the accepted domain model.
+6. Derive functional requirements (FRs) from material branches: specify a condition and one verifiable system obligation. Record shared rules once and link them to scenarios.
+7. Derive non-functional requirements (NFRs) from accepted quality constraints and specify a verification criterion. If a criterion is missing, return the question to the product manager; if there is no basis for NFRs, say so without adding placeholder requirements.
+8. Preserve existing IDs and assign stable IDs to new scenarios and requirements. Link each requirement to a scenario branch or an accepted decision.
+9. Check that material branches have outcomes, requirements are verifiable, and terms match the glossary. Remove duplication and leave implementation methods to the architect.
+10. Save scenarios and requirements under the [material storage rules](../orchestrator/references/material-storage.md) and give the coordinator links, open questions, and dependent materials. In response to review findings, update your artifacts or submit a reasoned objection for mediation.

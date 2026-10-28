@@ -1,27 +1,27 @@
-# Исполнение утверждённого плана
+# Executing the Approved Plan
 
-Применяй после разрешения пользователя на реализацию конкретной версии пакета.
+Apply this after the user authorizes implementation of a specific package version.
 
-## Выполни этап
+## Execute a Stage
 
-1. Восстанови утверждённый объём и уже выполненные этапы. Действуй в границах разрешений пользователя и правил проекта для окружений, данных и внешних изменений.
-2. Для очередного этапа создай нового исполнителя и отдельного ревьюера с настройками из [скила оркестратора](../SKILL.md). Следующий этап начинай после приёмки текущего.
-3. Передай исполнителю относящиеся требования, архитектуру, макет, файлы из карты и критерии приёмки. Приложи процедуры проверки и очистки, [правила хранения материалов](material-storage.md) и укажи, что другие участники работают в общей директории и их изменения нужно сохранить.
-4. Поручи исполнителю изменить код, тесты и документацию, проверить результат и очистить тестовое окружение, сохранив временные результаты до ревью. Перед проверкой приложения он подтверждает фактически используемую версию и предусмотренную изоляцию данных, а команды, исходы и условия окружения передаёт сообщением или временным отчётом.
-5. Передай ревьюеру те же основания, исходники, diff и временные результаты проверок. Он сверяет реализацию с утверждёнными требованиями и макетом, проверяет покрытие, побочные эффекты и соблюдение правил хранения материалов без редактирования кода.
-6. Получи `ACCEPT` либо `CHANGES_REQUIRED` с конкретным местом, доказательством, последствием и требуемым исправлением. Обязательная проверка с ошибкой или без результата исключает `ACCEPT`.
-7. Верни замечания тому же исполнителю, а исправления тому же ревьюеру. Аргументированное разногласие передай [медиатору](../../mediate-solution/SKILL.md) по правилам оркестратора.
-8. После `ACCEPT` и закрытия споров сверь diff и применимость проверок к текущей версии и условиям. Повтори только проверки, чьи результаты потеряли применимость или не закрывают существенный риск.
-9. Отметь этап завершённым с кратким итогом в основном документе, удали свои временные результаты после всех зависимых ревью и продолжай оставшийся согласованный объём. Останавливай работу только при подтверждённом препятствии, явно сохраняя незавершённые этапы.
+1. Restore the approved scope and stages already completed. Stay within user permissions and project rules for environments, data, and external changes.
+2. For each stage, create a new implementer and a separate reviewer using the settings in the [orchestrator skill](../SKILL.md). Start the next stage after the current one is accepted.
+3. Give the implementer the relevant requirements, architecture, prototype, files from the map, and acceptance criteria. Include verification and cleanup procedures and the [material storage rules](material-storage.md), and state that other participants work in the shared directory and their changes must be preserved.
+4. Instruct the implementer to change code, tests, and documentation, verify the result, and clean up the test environment, preserving temporary results until review. Before checking the application, the implementer confirms the version actually in use and the specified data isolation, then reports commands, outcomes, and environment conditions in a message or temporary report.
+5. Give the reviewer the same supporting materials, source code, diff, and temporary verification results. The reviewer compares the implementation with approved requirements and the prototype, and checks coverage, side effects, and compliance with material storage rules without editing code.
+6. Obtain `ACCEPT` or `CHANGES_REQUIRED` with a specific location, evidence, consequence, and required correction. A mandatory check that fails or has no result rules out `ACCEPT`.
+7. Return findings to the same implementer and corrections to the same reviewer. Refer reasoned disagreements to the [mediator](../../mediate-solution/SKILL.md) under the orchestrator's rules.
+8. After `ACCEPT` and resolution of disputes, check the diff and whether verification results apply to the current version and conditions. Repeat only checks whose results no longer apply or do not address a material risk.
+9. Mark the stage complete with a brief outcome in the main document, remove your temporary results after all dependent reviews, and continue the remaining agreed scope. Stop work only for a confirmed blocker, explicitly preserving unfinished stages.
 
-## Разреши отклонение
+## Resolve a Deviation
 
-1. Исправления внутри утверждённых границ проведи через обычное ревью кода. Изменение поведения, архитектуры или объёма верни владельцам решения до зависимой реализации.
-2. Для содержательного изменения получи обновлённые материалы, ревью и утверждение новой версии пакета. Затронутый UI проходит повторную верификацию пользователем.
+1. Route corrections within the approved scope through normal code review. Return changes to behavior, architecture, or scope to the decision owners before dependent implementation.
+2. For a substantive change, obtain updated materials, review, and approval of the new package version. Affected UI undergoes user verification again.
 
-## Проверь целый результат
+## Verify the Overall Result
 
-1. После всех этапов передай полный diff и утверждённый пакет новому ревьюеру с теми же правилами проверки кода. Замечания возвращай соответствующим исполнителям, исправления проверяет итоговый ревьюер.
-2. Обеспечь результаты итоговых проверок для конечной версии, включая предусмотренную проверку пользовательского пути в целевой среде. Сборка, моки и проверка отдельного компонента подтверждают только проверенный ими уровень.
-3. Исправь упавшие обязательные проверки и получи итоговый `ACCEPT`. Изменение согласованных обязательных проверок требует решения пользователя.
-4. Передай пользователю выполненный объём, вердикт, фактические проверки, ограничения и ссылки на итоги медиаций. Укажи состояние затронутого окружения после очистки и место результата, если оно влияет на его использование.
+1. After all stages, give the full diff and approved package to a new reviewer under the same code review rules. Return findings to the relevant implementers; the final reviewer checks the corrections.
+2. Ensure final verification results apply to the final version, including the planned user journey check in the target environment. Builds, mocks, and isolated component checks confirm only the level they actually check.
+3. Fix failed mandatory checks and obtain the final `ACCEPT`. Changing the agreed mandatory checks requires a user decision.
+4. Give the user the completed scope, verdict, actual checks, limitations, and links to mediation outcomes. State the condition of the affected environment after cleanup and the location of the result if it affects how the result can be used.

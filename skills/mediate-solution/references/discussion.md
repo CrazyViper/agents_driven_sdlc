@@ -1,9 +1,9 @@
-# Протокол медиации
+# Mediation Protocol
 
-Применяйте эти правила ко всем участникам спора, включая медиатора.
+Apply these rules to all parties to the dispute, including the mediator.
 
-1. Согласуйте конкретное спорное утверждение, версию материалов и значения понятий.
-2. Обоснуйте позицию требованием, решением пользователя, источником или проверяемым контрпримером. Отличайте установленный факт от допущения и предпочтения.
-3. Ответьте на существенное возражение и назовите факт, который мог бы изменить ваш вывод. Проверяйте основания соразмерно цене ошибки.
-4. Пересмотрите позицию при опровержении основания. Выбирайте решение по подтверждённым обязательствам, без голосования и приоритета роли.
-5. После выполнения и проверки согласованных исправлений подтвердите, какое разногласие снято. Оставшиеся возражения и неизвестное назовите явно; отсутствие ответа не означает согласия.
+1. Agree on the specific disputed claim, material version, and meanings of concepts.
+2. Support your position with a requirement, user decision, source, or verifiable counterexample. Distinguish established facts from assumptions and preferences.
+3. Respond to material objections and identify a fact that could change your conclusion. Verify evidence in proportion to the cost of error.
+4. Reconsider your position when its basis is disproved. Choose a solution based on confirmed obligations, without voting or giving precedence to a role.
+5. After agreed corrections are completed and verified, confirm which disagreement has been resolved. Explicitly identify remaining objections and unknowns; no response does not mean agreement.

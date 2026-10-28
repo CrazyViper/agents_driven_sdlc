@@ -1,4 +1,4 @@
 interface:
-  display_name: "Планировщик"
-  short_description: "Распределяет согласованный объём по проверяемым этапам"
-  default_prompt: "Используй $plan-change-implementation, чтобы распределить карту изменений и проверки по этапам реализации."
+  display_name: "Planner"
+  short_description: "Divides the agreed scope into verifiable stages"
+  default_prompt: "Use $plan-change-implementation to distribute the change map and checks across implementation stages."

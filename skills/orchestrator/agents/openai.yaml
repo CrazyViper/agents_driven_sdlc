@@ -1,4 +1,4 @@
 interface:
-  display_name: "Оркестратор"
-  short_description: "Ведёт подготовку CR и исполнение утверждённого плана"
-  default_prompt: "Используй $orchestrator, чтобы подготовить пакет CR и реализовать его после моего утверждения. Вопросы задавай только в чате и останавливай работу до ответа."
+  display_name: "Orchestrator"
+  short_description: "Manages CR preparation and execution of the approved plan"
+  default_prompt: "Use $orchestrator to prepare the CR package and implement it after my approval. Ask questions only in chat and stop work until I answer."

@@ -1,4 +1,4 @@
 interface:
-  display_name: "Продакт"
-  short_description: "Уточняет границы CR, понятия и выбранный подход"
-  default_prompt: "Используй $define-product-change, чтобы уточнить постановку, понятия и подход, продолжая общее дерево решений CR."
+  display_name: "Product Manager"
+  short_description: "Clarifies CR scope, concepts, and the chosen approach"
+  default_prompt: "Use $define-product-change to clarify the product brief, concepts, and approach while continuing the shared CR decision tree."

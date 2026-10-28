@@ -1,31 +1,33 @@
 ---
 name: review-solution
-description: Проверяет целостность, простоту и актуальность полного пакета CR после планирования и возвращает вердикт для его утверждения.
+description: Reviews the complete CR package after planning for coherence, simplicity, and current applicability, and returns a verdict for approval.
 ---
 
-# Ревьюер решения
+# Solution Reviewer
 
-Проверяй пакет отдельным от авторов агентом и записывай только свой вердикт и замечания.
+Review the package as an agent separate from its authors and record only your own verdict and findings.
 
-## Порядок работы
+Choose the language of communication and generated documents according to the user's request and project rules.
 
-1. Получи исходный запрос, решения пользователя, правила проекта и весь пакет с планом. Зафиксируй проверяемую версию, учитывая относящиеся незакоммиченные изменения.
-2. Сверь цель и границы с запросом, а понятия с канонической моделью. Для изменяемого UI проверь соответствие макета требованиям и подтверждение пользователем именно применимой версии.
-3. Проследи существенные решения от [дерева](../orchestrator/references/decision-tree.md) и их оснований через сценарии, требования и архитектуру к проверкам и этапам. Отметь блокирующие открытые ветки, потери, противоречия и необоснованный объём.
-4. Проверь существенные предположения и достижимость заявленных текущих сценариев по источникам описываемой версии и среды. Выяви уже выполненную работу и устаревшие ограничения, сохраняя различие текущего кода и целевого поведения.
-5. Оцени необходимость новых механизмов и технических зависимостей. Предлагай упрощение только с объяснением, какие обязательства оно сохраняет.
-6. Проверь карту конкретных файлов и влияние изменений на их потребителей. Сопоставь это влияние с границами решения и покрытием.
-7. Проверь, что сценарии подтверждают нужный результат в соответствующих условиях, а данные, подготовка и очистка воспроизводимы. Расширение покрытия требуй только для конкретного существенного пробела.
-8. Сверь план с картой: весь объём включён, зависимости соблюдены, этапы проверяются без будущей работы. Проверь наличие итоговой проверки целого результата.
-9. Проверь схемы, их отображение и пояснения по [правилам диаграмм](../orchestrator/references/diagrams.md) и соблюдение [правил хранения материалов](../orchestrator/references/material-storage.md). Возвращай владельцу смысловые пробелы, повторы и временные материалы, включённые в постоянные документы или diff.
-10. Для замечания укажи конкретный фрагмент, нарушенное обязательство, доказательство, последствие и владельца исправления. Отделяй доказанный недостаток от вопроса и личного предпочтения.
-11. Передай замечания через координатора и проверь исправленные части и зависимые связи. При аргументированном споре запроси отдельного [медиатора](../mediate-solution/SKILL.md), сохраняя ответственность за свой вердикт.
-12. Запиши статус для проверенной версии, существенные основания и открытые ограничения. Передай координатору вердикт со ссылками на материалы и логи медиации.
+## Workflow
 
-## Статусы
+1. Obtain the original request, user decisions, project rules, and the full package with its plan. Record the version being reviewed, including relevant uncommitted changes.
+2. Check the goal and scope against the request, and concepts against the canonical model. For changed UI, check that the prototype matches the requirements and that the user confirmed the applicable version specifically.
+3. Trace material decisions from the [tree](../orchestrator/references/decision-tree.md) and their rationale through scenarios, requirements, and architecture to checks and stages. Identify blocking open branches, omissions, contradictions, and unjustified scope.
+4. Verify material assumptions and the reachability of claimed current scenarios using sources for the described version and environment. Identify work already completed and outdated constraints, preserving the distinction between current code and target behavior.
+5. Assess the need for new mechanisms and technical dependencies. Propose simplification only with an explanation of which obligations it preserves.
+6. Check the map of specific files and the impact of changes on their consumers. Compare that impact with the solution's scope and coverage.
+7. Check that scenarios verify the required outcome under the relevant conditions, and that data, setup, and cleanup are reproducible. Require additional coverage only for a specific material gap.
+8. Compare the plan with the map: the entire scope is included, dependencies are respected, and stages can be verified without future work. Check that final verification of the overall result is included.
+9. Check diagrams, their rendering, and explanations against the [diagram rules](../orchestrator/references/diagrams.md), and check compliance with the [material storage rules](../orchestrator/references/material-storage.md). Return gaps in meaning, duplication, and temporary materials included in permanent documents or the diff to their owners.
+10. For each finding, identify the specific passage, violated obligation, evidence, consequence, and owner of the correction. Distinguish a demonstrated defect from a question or personal preference.
+11. Send findings through the coordinator and review the corrected parts and dependent connections. In a reasoned dispute, request a separate [mediator](../mediate-solution/SKILL.md), retaining responsibility for your verdict.
+12. Record the status for the reviewed version, material rationale, and open limitations. Give the coordinator the verdict with links to materials and mediation logs.
 
-- `ACCEPT`: обязательные проверки материалов выполнены, существенных открытых замечаний и блокирующих вопросов нет.
-- `CHANGES_REQUIRED`: укажи доказанные недостатки и адресные исправления.
-- `NEEDS_INPUT`: укажи недоступный факт или требуемое решение, владельца ответа и зависимую работу.
+## Statuses
 
-`ACCEPT` относится к проверенной версии пакета и не разрешает реализацию; разрешение получает оркестратор.
+- `ACCEPT`: mandatory checks of the materials are complete, with no material open findings or blocking questions.
+- `CHANGES_REQUIRED`: state demonstrated defects and specific corrections.
+- `NEEDS_INPUT`: state the unavailable fact or required decision, the owner of the answer, and dependent work.
+
+`ACCEPT` applies to the reviewed package version and does not authorize implementation; the orchestrator obtains that authorization.

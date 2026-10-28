@@ -1,14 +1,14 @@
-# Диаграммы в пакете решения
+# Diagrams in the Solution Package
 
-Для схем, файлов визуальных проверок и диагностики соблюдай [правила хранения материалов](material-storage.md).
+Follow the [material storage rules](material-storage.md) for diagrams, visual verification files, and diagnostics.
 
-## Порядок работы
+## Workflow
 
-1. Выбери вопрос, который должна объяснить схема, и покажи затронутую часть с необходимыми соседними связями. Переиспользуй достаточную каноническую схему по ссылке.
-2. Используй формат проекта, иначе выбери подходящий вид Mermaid. Укажи источник и отличи текущее состояние от целевого и предположений.
-3. Подпиши действия, направления связей и условия переходов точными терминами проекта. Различай доменные отношения, вызовы компонентов и связи хранилища, сохраняя устойчивые ID для ссылок.
-4. Под схемой запиши только существенные основания и ограничения, которых на ней не видно. Точные определения, требования и контракты оставь в каноническом тексте или таблице со ссылками.
-5. Сохрани исходник `.mmd`, экспорт `.svg` и превью в принятом документе, если проектом не задан другой формат. Используй относительные ссылки и сохраняй одну воспроизводимую процедуру экспорта.
-6. При изменении схемы обнови исходник, экспорт и связанные пояснения. Исправляй изображение через исходник или настройки экспорта.
-7. Проследи существенные пути, сверь их с требованиями и проверь ссылки и читаемость экспорта в целевом просмотрщике. При сбое проверь причину и доступный способ просмотра; обязательную визуальную проверку без результата оставь незавершённой.
-8. Предъяви актуальное превью или открой документ с ним. Ревьюер проверяет те же схемы и точные правила без создания дублирующих материалов.
+1. Choose the question the diagram should explain, and show the affected part with the necessary adjacent connections. Reuse a sufficient canonical diagram by linking to it.
+2. Use the project format; otherwise, choose an appropriate Mermaid diagram type. Identify the source and distinguish the current state from the target state and assumptions.
+3. Label actions, connection directions, and transition conditions with precise project terms. Distinguish domain relationships, component calls, and storage relationships, preserving stable IDs for references.
+4. Below the diagram, record only material rationale and constraints that are not visible in it. Keep exact definitions, requirements, and contracts in canonical text or tables with links.
+5. Save the `.mmd` source, `.svg` export, and a preview in the designated document unless the project specifies another format. Use relative links and maintain one reproducible export procedure.
+6. When a diagram changes, update its source, export, and related explanations. Fix the image through its source or export settings.
+7. Trace material paths, compare them with requirements, and check links and export readability in the target viewer. On failure, investigate the cause and an available way to view the diagram; leave mandatory visual verification incomplete if it has no result.
+8. Present the current preview or open the document containing it. The reviewer checks the same diagrams and exact rules without creating duplicate materials.

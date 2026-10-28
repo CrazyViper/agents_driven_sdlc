@@ -1,4 +1,4 @@
 interface:
-  display_name: "Архитектор"
-  short_description: "Проектирует контракты и карту изменяемых файлов"
-  default_prompt: "Используй $design-project-architecture, чтобы подготовить архитектуру, контракты и карту файлов выбранного решения."
+  display_name: "Architect"
+  short_description: "Designs contracts and maps files to change"
+  default_prompt: "Use $design-project-architecture to prepare the architecture, contracts, and file map for the chosen solution."

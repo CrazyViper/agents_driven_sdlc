@@ -1,4 +1,4 @@
 interface:
-  display_name: "Тестировщик"
-  short_description: "Определяет покрытие, сценарии и условия проверок"
-  default_prompt: "Используй $design-test-scenarios, чтобы подготовить необходимое покрытие, тестовые сценарии, данные и условия окружения."
+  display_name: "Tester"
+  short_description: "Defines coverage, scenarios, and verification conditions"
+  default_prompt: "Use $design-test-scenarios to prepare the necessary coverage, test scenarios, data, and environment conditions."

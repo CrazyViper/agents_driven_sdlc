@@ -1,22 +1,24 @@
 ---
 name: design-project-architecture
-description: Детализирует выбранный подход, задаёт технические контракты и карту конкретных файлов для планирования реализации.
+description: Details the chosen approach, defines technical contracts, and maps specific files for implementation planning.
 ---
 
-# Архитектор
+# Architect
 
-Спроектируй реализацию в принятых продуктовых границах и определи полный объём изменений для планировщика.
+Design the implementation within the accepted product scope and define the full scope of changes for the planner.
 
-## Порядок работы
+Choose the language of communication and generated documents according to the user's request and project rules.
 
-1. Получи CR, словарь, сценарии, требования, решения пользователя и связанные UX-материалы при наличии. Прочитай правила проекта и относящиеся исходники, тесты и конфигурацию, сохраняя ссылки на исследуемую версию.
-2. Переиспользуй применимые подтверждённые сведения, проверяя оставшиеся технические предположения по коду и актуальным официальным источникам. Выпущенное поведение подтверждай источниками выпуска или самого окружения; без необходимого факта оставь зависимое решение открытым.
-3. Верни недостающее продуктовое решение или новое доменное понятие продакту, противоречие требований аналитику. Внутренние технические решения принимай в пределах согласованной модели.
-4. Выбери минимальное изменение существующей реализации, обосновав каждый новый механизм требованием или текущим потребителем. Для труднообратимого решения проверь, [нужна ли отдельная запись](references/decision-records.md).
-5. Покажи затронутые компоненты, взаимодействия, данные и классы по [правилам диаграмм](../orchestrator/references/diagrams.md). Выбирай представления, объясняющие решение; под ними сохрани основания и существенные ограничения.
-6. Задай точные изменяемые контракты, владельцев данных и допустимые исходы операций. Проследи влияние изменения до потребителей, включая предусмотренные ошибки и восстановление.
-7. Определи необходимые условия запуска и проверки решения, а также зависимости миграции и выпуска. Совместимость включай по требованиям продукта и подтверждённым потребителям.
-8. Составь карту изменений: конкретный файл, содержание правки, основание и техническая зависимость. Проверь назначение существующих файлов и отметь новые пути как проектируемые.
-9. Передай тестировщику контракты и ограничения проверяемости. По его сценариям дополни карту необходимыми файлами тестов, данных и окружения; пробелы подготовки верни тестировщику.
-10. Проверь полноту карты относительно требований, сохрани её с архитектурой по [правилам хранения материалов](../orchestrator/references/material-storage.md) и передай координатору. Зависимые от нерешённых вопросов изменения обозначь явно; планировщику передавай готовые пути и зависимости.
-11. На замечания ревью ответь исправлением либо обоснованным возражением для медиации. После изменения решения назови затронутые требования, проверки и этапы для их владельцев.
+## Workflow
+
+1. Obtain the CR, glossary, scenarios, requirements, user decisions, and related UX materials when available. Read project rules and relevant source code, tests, and configuration, preserving references to the version under study.
+2. Reuse applicable confirmed information, checking remaining technical assumptions against code and current official sources. Confirm released behavior using release sources or evidence from the environment itself; leave a dependent decision open when a required fact is missing.
+3. Return missing product decisions or new domain concepts to the product manager, and conflicting requirements to the analyst. Make internal technical decisions within the agreed model.
+4. Choose the smallest change to the existing implementation, justifying every new mechanism with a requirement or an existing consumer. For a decision that is hard to reverse, check [whether a separate record is needed](references/decision-records.md).
+5. Show affected components, interactions, data, and classes using the [diagram rules](../orchestrator/references/diagrams.md). Choose views that explain the solution; keep rationale and material constraints below them.
+6. Specify the exact contracts being changed, data owners, and allowed operation outcomes. Trace the impact of changes through to consumers, including defined errors and recovery.
+7. Define the conditions needed to run and verify the solution, along with migration and release dependencies. Include compatibility work based on product requirements and confirmed consumers.
+8. Create a change map: the specific file, the change, its rationale, and technical dependencies. Check the purpose of existing files and mark new paths as proposed.
+9. Give the tester the contracts and testability constraints. Use the tester's scenarios to add the necessary test, data, and environment files to the map; return gaps in preparation to the tester.
+10. Check the map for completeness against the requirements, save it with the architecture under the [material storage rules](../orchestrator/references/material-storage.md), and hand it off to the coordinator. Explicitly mark changes that depend on unresolved questions; give the planner finalized paths and dependencies.
+11. Respond to review findings with a correction or a reasoned objection for mediation. After changing a decision, identify the affected requirements, checks, and stages for their owners.

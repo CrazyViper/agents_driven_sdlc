@@ -1,4 +1,4 @@
 interface:
-  display_name: "Медиатор"
-  short_description: "Проверяет основания разногласий и ведёт лог спора"
-  default_prompt: "Используй $mediate-solution, чтобы разобрать основания спора и зафиксировать его решение в логе."
+  display_name: "Mediator"
+  short_description: "Examines grounds for disagreement and keeps a dispute log"
+  default_prompt: "Use $mediate-solution to examine the grounds for a dispute and record its resolution in the log."
