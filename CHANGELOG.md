@@ -4,6 +4,12 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 
 ## [Unreleased]
 
+## [1.0.1] - 2026-10-28
+
+- Added installation with `npx github:CrazyViper/agents_driven_sdlc`. The installer now uses Node.js on Windows, macOS, and Linux; Node.js 22+ replaces the Bash requirement. The destination, installed files, and replacement behavior are unchanged.
+- Replaced `scripts/install.sh` with `scripts/install.cjs`. Existing copied installations can be updated with npx or `node scripts/install.cjs` from a local checkout.
+- Removed automatic migration from old symlink installations. The installer no longer removes links outside the bundle; conflicting skill paths must be moved manually before installation.
+
 ## [1.0.0] - 2026-10-28
 
 The first stable release. Compatibility follows the rules in [RELEASE.md](RELEASE.md#compatibility).

@@ -1,0 +1,28 @@
+{
+  "name": "agents-driven-sdlc",
+  "version": "1.0.1",
+  "description": "Install the agent-driven SDLC skill bundle for Codex.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrazyViper/agents_driven_sdlc.git"
+  },
+  "bin": {
+    "agents-driven-sdlc": "scripts/install.cjs"
+  },
+  "files": [
+    "scripts/install.cjs",
+    "skills/",
+    "VERSION",
+    "LICENSE",
+    "THIRD_PARTY_NOTICES.md",
+    "CHANGELOG.md",
+    "RELEASE.md"
+  ],
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "test": "node --test"
+  }
+}

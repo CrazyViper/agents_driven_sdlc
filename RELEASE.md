@@ -4,7 +4,7 @@
 
 The bundle includes all skills, their `agents/openai.yaml` files, references, and the installer. They are released together; individual skills do not receive separate version numbers.
 
-[VERSION](VERSION) contains a single [SemVer](https://semver.org/) version without the `v` prefix. A release is identified by an annotated `v<version>` tag on the commit containing that value and a matching entry in [CHANGELOG.md](CHANGELOG.md). A version number in the working copy without a tag does not yet indicate a released version.
+[VERSION](VERSION) contains a single [SemVer](https://semver.org/) version without the `v` prefix; the version in [package.json](package.json) must match. A release is identified by an annotated `v<version>` tag on the commit containing that value and a matching entry in [CHANGELOG.md](CHANGELOG.md). A version number in the working copy without a tag does not yet indicate a released version.
 
 Published tags and release contents are immutable. A fix receives a new version number; also record the full commit SHA for exact reproduction.
 
@@ -25,9 +25,9 @@ Assess behavioral changes, including `description`, approval conditions, and mod
 ## Preparing a Release
 
 1. Update `Unreleased` as changes are made: describe user-visible changes, incompatibilities, and migration steps. When installation changes, describe migration and the limits of rolling back to the old format.
-2. Before release, choose a version using the table, update `VERSION`, and move accumulated entries into a section with the version and date in `YYYY-MM-DD` format. Leave an empty `Unreleased` section for future changes.
+2. Before release, choose a version using the table, update `VERSION` and `package.json`, and move accumulated entries into a section with the version and date in `YYYY-MM-DD` format. Leave an empty `Unreleased` section for future changes.
 3. Validate frontmatter and structure for all skills using the standard `quick_validate.py`; check installer syntax, affected links, and consistency between `agents/openai.yaml` and the instructions. For a behavioral change, check the affected scenario and a meaningful opposite case.
-4. Test bundle copying, reinstallation, updates, rollback, and migration from old symlinks with `python3 -m unittest discover -s tests`. The tests use temporary directories through `AGENTS_SKILLS_DIR`; unrelated files must be preserved when conflicts occur.
+4. Run `npm test` to check bundle copying, reinstallation, updates, rollback, conflicts, and npx installation from the actual npm tarball. Tests use temporary directories and an isolated npm cache; unrelated files must be preserved when conflicts occur. Check the Windows and Linux CI results before release.
 5. Review the diff and commit only release files. Do not include `mistakes.md` or temporary operational reports in the commit. After committing, create a tag on the verified state.
 
 Structural validation requires Python 3 with PyYAML and an installed `skill-creator`. Run these commands from the repository root; if the skill is installed elsewhere, set `validator` to its actual path:
@@ -39,7 +39,7 @@ Structural validation requires Python 3 with PyYAML and an installed `skill-crea
   for skill_dir in skills/*; do
     python3 "$validator" "$skill_dir"
   done
-  bash -n scripts/install.sh
+  node --check scripts/install.cjs
   git diff --check
 )
 ```
@@ -65,3 +65,5 @@ git push origin "refs/tags/v$(cat VERSION)"
 ```
 
 Do not force-overwrite a tag. Follow the [README](README.md#quick-start) to install between tasks so that all participants in a task use the same bundle.
+
+The npx command downloads the package directly from GitHub; publishing to the npm registry is not required. A release tag containing `package.json` can be installed with `npx github:CrazyViper/agents_driven_sdlc#v<version>`.

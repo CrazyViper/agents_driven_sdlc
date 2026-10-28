@@ -8,23 +8,21 @@ Communication and generated documents follow the language specified by the user'
 
 ## Quick Start
 
-You need Git, Bash, and a configured local Codex with subagent support. Check that the models in the [orchestrator settings](skills/orchestrator/SKILL.md#prepare-the-work) are available.
+You need Node.js 22 or later with npm, Git, and a configured local Codex with subagent support. The installer uses Node.js and works from PowerShell on Windows or a terminal on macOS and Linux. Check that the models in the [orchestrator settings](skills/orchestrator/SKILL.md#prepare-the-work) are available.
 
 Recommended for UI work: `visualize` by OpenAI for inline previews, and [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance) for current web guidance. These optional skills are not installed by this bundle; without them, the designer uses a local interactive preview and current official platform documentation.
 
-This quick start installs release `v1.0.0`.
+### 1. Install the Skill Bundle
 
-### 1. Clone the Repository and Install the Skill Bundle
+Run:
 
-Run in Bash:
-
-```bash
-git clone --branch v1.0.0 https://github.com/CrazyViper/agents_driven_sdlc.git &&
-cd agents_driven_sdlc &&
-bash scripts/install.sh
+```text
+npx github:CrazyViper/agents_driven_sdlc
 ```
 
-The installer copies nine skills to `~/.agents/skills/agents_driven_sdlc/` and prints the installed bundle version and skill count. After a successful installation, you can delete the repository clone.
+This downloads the current default branch and copies nine skills to `~/.agents/skills/agents_driven_sdlc/` (`%USERPROFILE%\.agents\skills\agents_driven_sdlc\` on Windows), including the version, license, and attribution notices. The installer prints the installed version and skill count. You do not need to clone the repository yourself or keep its downloaded copy.
+
+Run the same command to update or reinstall the bundle. Files inside the bundle directory are replaced; other user skills are preserved. To pin a version, append `#<tag-or-commit>` to the GitHub source. Installation through npx is supported starting with `v1.0.1`.
 
 ### 2. Open Your Project and Start the Orchestrator
 
@@ -62,7 +60,7 @@ The prototype and plan can be revised based on your feedback as many times as ne
 
 The rules for [diagrams](skills/orchestrator/references/diagrams.md), [execution](skills/orchestrator/references/execution.md), and [mediation](skills/mediate-solution/references/discussion.md) are in their respective references.
 
-Subagent types, models, and reasoning effort levels are listed under "Default launch settings" in the [orchestrator skill](skills/orchestrator/SKILL.md#prepare-the-work). Change the relevant settings and run `bash scripts/install.sh` again.
+Subagent types, models, and reasoning effort levels are listed under "Default launch settings" in the [orchestrator skill](skills/orchestrator/SKILL.md#prepare-the-work). To customize the bundle, edit the source files in a local checkout and run `node scripts/install.cjs` from its root. A later installation from GitHub replaces those local customizations.
 
 Use the [decision tree](skills/orchestrator/references/decision-tree.md) when working through alternatives, the [concept guidance](skills/define-product-change/references/concepts.md) when clarifying terms, and the [decision record guidance](skills/design-project-architecture/references/decision-records.md) for architectural decisions that are hard to reverse. Apply these instructions as needed for the task.
 
