@@ -12,14 +12,14 @@ You need Git, Bash, and a configured local Codex with subagent support. Check th
 
 Recommended for UI work: `visualize` by OpenAI for inline previews, and [Modern Web Guidance](https://github.com/GoogleChrome/modern-web-guidance) for current web guidance. These optional skills are not installed by this bundle; without them, the designer uses a local interactive preview and current official platform documentation.
 
-This quick start installs the current `main` branch.
+This quick start installs release `v1.0.0`.
 
 ### 1. Clone the Repository and Install the Skill Bundle
 
 Run in Bash:
 
 ```bash
-git clone --branch main https://github.com/CrazyViper/agents_driven_sdlc.git &&
+git clone --branch v1.0.0 https://github.com/CrazyViper/agents_driven_sdlc.git &&
 cd agents_driven_sdlc &&
 bash scripts/install.sh
 ```

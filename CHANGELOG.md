@@ -4,6 +4,10 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 
 ## [Unreleased]
 
+## [1.0.0] - 2026-10-28
+
+The first stable release. Compatibility follows the rules in [RELEASE.md](RELEASE.md#compatibility).
+
 - Added the MIT License for the bundle and preserved Matt Pocock's notices for instructions adapted from `mattpocock/skills`.
 - Added a quick start covering cloning and installation, starting a task through the orchestrator, approving the plan, and receiving the implementation result.
 - Installation from a working copy or release now copies the entire bundle to `~/.agents/skills/agents_driven_sdlc/`, including the version, license, and attribution notices. Reinstallation replaces this folder in full; source changes take effect only after reinstallation.
@@ -12,6 +16,7 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 - Translated all tracked documentation, skill instructions, references, metadata, and installer messages into English. Communication and generated documents follow the language specified by the user's request and project rules.
 - Made `visualize` and `modern-web-guidance` recommended UX dependencies, with local interactive previews and official documentation as alternatives. Missing helper skills do not block the workflow; prototype checks and explicit user approval remain required.
 - Set all default subagent launches, including mediation, to `gpt-6.1-sol` with `xhigh` reasoning effort.
+- Pinned the quick start to release `v1.0.0`.
 
 ### Migrating to Copied Installation
 
