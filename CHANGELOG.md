@@ -1,36 +1,37 @@
-# История изменений
+# Changelog
 
-Все скилы выпускаются одним комплектом. Номер хранится в [VERSION](VERSION), порядок выпуска описан в [RELEASE.md](RELEASE.md).
+All skills are released as one bundle. Its version is stored in [VERSION](VERSION), and the release process is described in [RELEASE.md](RELEASE.md).
 
 ## [Unreleased]
 
-- Добавлена лицензия MIT для комплекта и сохранены уведомления Matt Pocock для адаптированных инструкций из `mattpocock/skills`.
-- Добавлен быстрый старт от клонирования и установки до запуска задачи через оркестратор, утверждения плана и получения результата реализации.
-- Установка из рабочей копии и выпуска теперь копирует весь комплект в `~/.agents/skills/agents_driven_sdlc/`, включая версию, лицензию и уведомления об авторстве. Повторная установка целиком заменяет эту папку; изменения исходников начинают действовать только после переустановки.
-- Общие правила хранения вынесены в отдельный референс: актуальные материалы каждого CR размещаются в папке с его идентификатором и кратким названием. Временные отчёты и диагностика хранятся вне дерева проекта и не включаются в Git или постоянные документы.
-- Сводка CR ссылается только на основные актуальные документы. Результаты прогонов передаются участникам временно и удаляются после зависимых ревью; в документах остаются краткие итоги проверок.
+- Added the MIT License for the bundle and preserved Matt Pocock's notices for instructions adapted from `mattpocock/skills`.
+- Added a quick start covering cloning and installation, starting a task through the orchestrator, approving the plan, and receiving the implementation result.
+- Installation from a working copy or release now copies the entire bundle to `~/.agents/skills/agents_driven_sdlc/`, including the version, license, and attribution notices. Reinstallation replaces this folder in full; source changes take effect only after reinstallation.
+- Moved shared storage rules into a separate reference: current materials for each CR are stored in a folder named with its identifier and short title. Temporary reports and diagnostics are stored outside the project tree and are not included in Git or permanent documents.
+- The CR summary links only to the main current documents. Run results are shared temporarily with participants and removed after dependent reviews; documents retain brief verification summaries.
+- Translated all tracked documentation, skill instructions, references, metadata, and installer messages into English. Communication and generated documents follow the language specified by the user's request and project rules.
 
-### Переход на копирование
+### Migrating to Copied Installation
 
-Запусти новый `scripts/install.sh`. Он удалит старые симлинки в корне пользовательского каталога скилов, если они указывают на этот клон или другой клон `CrazyViper/agents_driven_sdlc`. При конфликте с обычным файлом, каталогом или непроверенной ссылкой установка остановится до замены комплекта; перенеси конфликтующий путь вручную.
+Run the new `scripts/install.sh`. It removes old symlinks at the root of the user's skills directory if they point to this clone or another clone of `CrazyViper/agents_driven_sdlc`. If an ordinary file, directory, or unverified symlink conflicts with installation, the installer stops before replacing the bundle; move the conflicting path manually.
 
-Установщик сохраняет остальные пользовательские скилы. Файлы внутри `agents_driven_sdlc/` заменяются полностью, поэтому правки нужно делать в исходном репозитории. Выпуск `v0.1.0` содержит прежний установщик симлинков; его повторный запуск не является откатом новой установки.
+The installer preserves other user skills. Files inside `agents_driven_sdlc/` are replaced in full, so make changes in the source repository. Release `v0.1.0` contains the previous symlink installer; running it again does not roll back the new installation.
 
 ## [0.1.0] - 2026-10-27
 
-Первый версионированный комплект на основе существующих скилов.
+The first versioned bundle based on the existing skills.
 
-### В составе
+### Included
 
-- Девять скилов для UX-макета, постановки, сценариев, архитектуры, проверок, планирования, ревью, медиации и оркестрации реализации.
-- Общие инструкции по дереву решений, понятиям, архитектурным решениям, диаграммам и сводке CR.
-- Установщик пользовательских симлинков с защитой обычных файлов и каталогов от перезаписи.
+- Nine skills covering UX prototyping, product definition, scenarios, architecture, verification, planning, review, mediation, and implementation orchestration.
+- Shared guidance on the decision tree, concepts, architectural decisions, diagrams, and the CR summary.
+- An installer for user-level symlinks that protects ordinary files and directories from being overwritten.
 
-### Добавлено
+### Added
 
-- Единая версия комплекта по SemVer и правила выпуска.
-- Инструкция установки, обновления и отката на конкретный тег через отдельный worktree.
+- A shared SemVer version for the bundle and release rules.
+- Instructions for installing, updating, and rolling back to a specific tag through a separate worktree.
 
-### Переход
+### Migration
 
-Содержимое скилов и их имена сохранены. Для перехода с установки из рабочей копии выполни [установку конкретной версии](https://github.com/CrazyViper/agents_driven_sdlc/blob/v0.1.0/README.md#конкретная-версия) после появления тега `v0.1.0`.
+Skill contents and names are preserved. To migrate from an installation based on a working copy, follow the [instructions for installing a specific version](https://github.com/CrazyViper/agents_driven_sdlc/blob/v0.1.0/README.md#%D0%BA%D0%BE%D0%BD%D0%BA%D1%80%D0%B5%D1%82%D0%BD%D0%B0%D1%8F-%D0%B2%D0%B5%D1%80%D1%81%D0%B8%D1%8F) once the `v0.1.0` tag is available.

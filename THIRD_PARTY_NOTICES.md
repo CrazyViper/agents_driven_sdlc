@@ -1,16 +1,16 @@
-# Материалы сторонних авторов
+# Third-Party Notices
 
-В комплект входят адаптации инструкций Matt Pocock из [mattpocock/skills](https://github.com/mattpocock/skills), распространяемых по [MIT](https://github.com/mattpocock/skills/blob/main/LICENSE).
+The bundle includes adaptations of Matt Pocock's instructions from [mattpocock/skills](https://github.com/mattpocock/skills), distributed under the [MIT License](https://github.com/mattpocock/skills/blob/main/LICENSE).
 
-| Материал в этом репозитории | Исходный материал | Что адаптировано |
+| Material in This Repository | Original Material | Adapted Content |
 | --- | --- | --- |
-| [Общее дерево решений](skills/orchestrator/references/decision-tree.md) | `grilling/SKILL.md` | Дерево зависимых решений, раунды готовых вопросов и пересмотр после ответа пользователя. |
-| [Работа с понятиями](skills/define-product-change/references/concepts.md) | `domain-modeling/SKILL.md`, `CONTEXT-FORMAT.md` | Проверка терминов и границ понятий, сверка с кодом, немедленное обновление краткого предметного словаря. |
-| [Запись архитектурного решения](skills/design-project-architecture/references/decision-records.md) | `domain-modeling/SKILL.md`, `ADR-FORMAT.md` | Условия для отдельной записи, краткое описание контекста, решения и причин, создание документов по необходимости. |
+| [Shared Decision Tree](skills/orchestrator/references/decision-tree.md) | `grilling/SKILL.md` | A tree of dependent decisions, rounds of ready questions, and revisions after user answers. |
+| [Working with Concepts](skills/define-product-change/references/concepts.md) | `domain-modeling/SKILL.md`, `CONTEXT-FORMAT.md` | Checking terms and concept boundaries, verifying against code, and immediately updating a concise domain glossary. |
+| [Recording an Architectural Decision](skills/design-project-architecture/references/decision-records.md) | `domain-modeling/SKILL.md`, `ADR-FORMAT.md` | Conditions for a separate record, a brief account of the context, decision, and rationale, and creating documents as needed. |
 
-Сопоставление выполнено с установленным пакетом `mattpocock-skills` версии `1.2.3-explicit.1+codex.20260826092338`. Это идентификатор локального пакета, а не тег исходного репозитория. Материалы переведены, сокращены и изменены для ролей и порядка работы этого комплекта.
+The mapping was made against the installed `mattpocock-skills` package version `1.2.3-explicit.1+codex.20260826092338`. This is a local package identifier, not a tag in the source repository. The materials have been translated, shortened, and modified for this bundle's roles and workflow.
 
-Ниже сохранены исходное уведомление об авторских правах и полный текст лицензии. При распространении адаптированных материалов сохраняйте это уведомление и лицензию вместе с ними.
+The original copyright notice and full license text are preserved below. When distributing adapted materials, retain this notice and license with them.
 
 ```text
 MIT License

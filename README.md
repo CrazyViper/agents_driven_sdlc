@@ -1,68 +1,74 @@
 # agents_driven_sdlc
 
-Девять скилов Codex для проектирования и реализации изменений в программном продукте.
-Общий CR (запрос на изменение) связывает результаты ролей, правила конкретного проекта задают его `AGENTS.md` и документация.
+Nine Codex skills for designing and implementing changes to a software product.
+A shared CR (change request) connects the roles' outputs. The project's `AGENTS.md` and documentation define its specific rules.
 
-## Быстрый старт
+Communication and generated documents follow the language specified by the user's request and project rules.
 
-Нужны Git, Bash и настроенный локальный Codex с поддержкой субагентов. Проверь доступность моделей из [настроек оркестратора](skills/orchestrator/SKILL.md#подготовь-работу). Для UI используются `visualize` и `modern-web-guidance`.
+## Quick Start
 
-Быстрый старт устанавливает текущую ветку `main`.
+You need Git, Bash, and a configured local Codex with subagent support. Check that the models in the [orchestrator settings](skills/orchestrator/SKILL.md#prepare-the-work) are available. UI work uses `visualize` and `modern-web-guidance`.
 
-### 1. Клонируй репозиторий и установи комплект скилов
+This quick start installs the current `main` branch.
 
-Выполни в Bash:
+### 1. Clone the Repository and Install the Skill Bundle
+
+Run in Bash:
+
 ```bash
 git clone --branch main https://github.com/CrazyViper/agents_driven_sdlc.git &&
 cd agents_driven_sdlc &&
 bash scripts/install.sh
 ```
-Установщик скопирует девять скилов в `~/.agents/skills/agents_driven_sdlc/` и выведет «Установлен комплект». После успешной установки клон репозитория можно удалить.
 
-### 2. Открой свой проект и запусти оркестратор
+The installer copies nine skills to `~/.agents/skills/agents_driven_sdlc/` and prints the installed bundle version and skill count. After a successful installation, you can delete the repository clone.
 
-Открой свой проект в Codex и напиши в новом чате:
+### 2. Open Your Project and Start the Orchestrator
+
+Open your project in Codex and enter this in a new chat:
 
 ```text
-$orchestrator сделай возможность добавлять запись в избранное
+$orchestrator add the ability to mark an entry as a favorite
 ```
 
-Подставь свою задачу. Если скил не обнаружен, проверь наличие `~/.agents/skills/agents_driven_sdlc/orchestrator/SKILL.md` и перезапусти Codex.
+Replace the example with your task. If the skill is not detected, check that `~/.agents/skills/agents_driven_sdlc/orchestrator/SKILL.md` exists and restart Codex.
 
-### 3. Ответь на уточняющие вопросы, утверди сначала макет, потом архитектуру и план, потом прими работу
+### 3. Answer Questions, Approve the Prototype, Then the Architecture and Plan, and Accept the Completed Work
 
-Оркестратор изучит проект, уточнит задачу, задав ряд вопросов и проведёт её по этапам:
+The orchestrator studies the project, asks questions to clarify the task, and takes it through these stages:
 
-1. Сначала подготовит макет и покажет его тебе на утверждение. Для задач без изменений интерфейса этот этап пропускается.
-2. После утверждения макета займётся детальным проектированием и планированием. Покажет подготовленное решение и план реализации на отдельное утверждение.
-3. Только после твоего явного утверждения решения и плана выполнит реализацию, проверки и ревью.
+1. First, it prepares a prototype and shows it to you for approval. This stage is skipped for tasks without interface changes.
+2. After you approve the prototype, it prepares the detailed design and implementation plan, then presents them for separate approval.
+3. Only after you explicitly approve the solution and plan does it proceed with implementation, checks, and reviews.
 
-Макет и план можно дорабатывать по твоим замечаниям столько, сколько потребуется. К следующему этапу оркестратор перейдёт, когда результат тебя устроит и ты его утвердишь.
+The prototype and plan can be revised based on your feedback as many times as needed. The orchestrator moves to the next stage once you are satisfied with the result and approve it.
 
-## Скилы
+## Skills
 
-| Скил | Результат |
+| Skill | Output |
 | --- | --- |
-| [orchestrator](skills/orchestrator/SKILL.md) | Координация ролей, утверждение пакета и исполнение плана. |
-| [ux-designer](skills/ux-designer/SKILL.md) | Проверенный интерактивный макет и решения пользователя. |
-| [define-product-change](skills/define-product-change/SKILL.md) | Цель и границы CR, доменная модель и выбранный подход. |
-| [develop-user-scenarios](skills/develop-user-scenarios/SKILL.md) | Сценарии и проверяемые ФТ/НФТ. |
-| [design-project-architecture](skills/design-project-architecture/SKILL.md) | Архитектура, контракты и карта конкретных файлов. |
-| [design-test-scenarios](skills/design-test-scenarios/SKILL.md) | Покрытие, тестовые сценарии и условия данных и окружения. |
-| [plan-change-implementation](skills/plan-change-implementation/SKILL.md) | План последовательно проверяемых этапов. |
-| [review-solution](skills/review-solution/SKILL.md) | Вердикт по конкретной версии полного пакета. |
-| [mediate-solution](skills/mediate-solution/SKILL.md) | Проверенные основания разногласия и лог его разрешения. |
+| [orchestrator](skills/orchestrator/SKILL.md) | Role coordination, package approval, and plan execution. |
+| [ux-designer](skills/ux-designer/SKILL.md) | A verified interactive prototype and user decisions. |
+| [define-product-change](skills/define-product-change/SKILL.md) | The CR goal and scope, domain model, and chosen approach. |
+| [develop-user-scenarios](skills/develop-user-scenarios/SKILL.md) | Scenarios and verifiable functional and non-functional requirements. |
+| [design-project-architecture](skills/design-project-architecture/SKILL.md) | Architecture, contracts, and a map of specific files. |
+| [design-test-scenarios](skills/design-test-scenarios/SKILL.md) | Coverage, test scenarios, and data and environment conditions. |
+| [plan-change-implementation](skills/plan-change-implementation/SKILL.md) | A plan of stages that can be verified in sequence. |
+| [review-solution](skills/review-solution/SKILL.md) | A verdict on a specific version of the complete package. |
+| [mediate-solution](skills/mediate-solution/SKILL.md) | Verified grounds for a disagreement and a log of its resolution. |
 
-Правила [диаграмм](skills/orchestrator/references/diagrams.md), [исполнения](skills/orchestrator/references/execution.md) и [медиации](skills/mediate-solution/references/discussion.md) находятся в соответствующих справочниках.
+The rules for [diagrams](skills/orchestrator/references/diagrams.md), [execution](skills/orchestrator/references/execution.md), and [mediation](skills/mediate-solution/references/discussion.md) are in their respective references.
 
-Типы субагентов, модели и уровни рассуждения заданы в таблице «Настройки запуска по умолчанию» в [скиле оркестратора](skills/orchestrator/SKILL.md#подготовь-работу). Измени нужные параметры и повторно запусти `bash scripts/install.sh`.
+Subagent types, models, and reasoning effort levels are listed under "Default launch settings" in the [orchestrator skill](skills/orchestrator/SKILL.md#prepare-the-work). Change the relevant settings and run `bash scripts/install.sh` again.
 
-При работе с вариантами решений используются [дерево](skills/orchestrator/references/decision-tree.md), при уточнении терминов [понятия](skills/define-product-change/references/concepts.md), при труднообратимом архитектурном решении [его запись](skills/design-project-architecture/references/decision-records.md). Эти инструкции подключаются по задаче.
+Use the [decision tree](skills/orchestrator/references/decision-tree.md) when working through alternatives, the [concept guidance](skills/define-product-change/references/concepts.md) when clarifying terms, and the [decision record guidance](skills/design-project-architecture/references/decision-records.md) for architectural decisions that are hard to reverse. Apply these instructions as needed for the task.
 
-## Версионирование и история изменений
-- Единая версия комплекта хранится в [VERSION](VERSION).
-- Изменения описаны в [CHANGELOG.md](CHANGELOG.md).
-- Правила SemVer и выпуска в [RELEASE.md](RELEASE.md).
+## Versioning and Change History
 
-## Лицензия
-Комплект распространяется по [лицензии MIT](LICENSE). Заимствованные материалы и уведомления об авторстве перечислены в [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).
+- The shared bundle version is stored in [VERSION](VERSION).
+- Changes are documented in [CHANGELOG.md](CHANGELOG.md).
+- SemVer and release rules are in [RELEASE.md](RELEASE.md).
+
+## License
+
+The bundle is distributed under the [MIT License](LICENSE). Adapted materials and attribution notices are listed in [THIRD_PARTY_NOTICES.md](THIRD_PARTY_NOTICES.md).

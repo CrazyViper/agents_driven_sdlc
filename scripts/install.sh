@@ -25,12 +25,12 @@ fail() {
   exit 1
 }
 
-# Проверить комплект до изменения установленной версии.
+# Validate the bundle before changing the installed version.
 for skill_name in "${skill_names[@]}"; do
-  [[ -f "${source_skills_dir}/${skill_name}/SKILL.md" ]] || fail "Не найден исходный скил: ${skill_name}"
+  [[ -f "${source_skills_dir}/${skill_name}/SKILL.md" ]] || fail "Source skill not found: ${skill_name}"
 done
 for file_name in VERSION LICENSE THIRD_PARTY_NOTICES.md; do
-  [[ -f "${repository_dir}/${file_name}" ]] || fail "Не найден файл комплекта: ${file_name}"
+  [[ -f "${repository_dir}/${file_name}" ]] || fail "Bundle file not found: ${file_name}"
 done
 
 mkdir -p "${target_skills_dir}"
@@ -38,14 +38,14 @@ target_skills_dir="$(cd "${target_skills_dir}" && pwd -P)"
 target_bundle="${target_skills_dir}/${bundle_name}"
 
 case "${repository_dir}/" in
-  "${target_bundle}/"*) fail "Каталог установки содержит исходники: ${target_bundle}" ;;
+  "${target_bundle}/"*) fail "The installation directory contains the source files: ${target_bundle}" ;;
 esac
 
 if [[ -e "${target_bundle}" || -L "${target_bundle}" ]]; then
   [[ -d "${target_bundle}" && ! -L "${target_bundle}" &&
      -f "${target_bundle}/.installed-by" && ! -L "${target_bundle}/.installed-by" &&
      "$(cat "${target_bundle}/.installed-by")" == "${bundle_name}" ]] ||
-    fail "Путь занят другим содержимым: ${target_bundle}. Переместите его перед установкой."
+    fail "The path is occupied by unrelated content: ${target_bundle}. Move it before installing."
 fi
 
 is_legacy_bundle_link() {
@@ -65,24 +65,24 @@ is_legacy_bundle_link() {
   esac
 }
 
-# Старые копии и чужие ссылки с теми же именами нельзя удалять автоматически.
+# Do not automatically remove old copies or unrelated symlinks with the same names.
 for skill_name in "${skill_names[@]}" plan-implement-review; do
   legacy_path="${target_skills_dir}/${skill_name}"
   if [[ -e "${legacy_path}" || -L "${legacy_path}" ]]; then
     if [[ -L "${legacy_path}" ]] && is_legacy_bundle_link "${legacy_path}" "${skill_name}"; then
       legacy_links+=("${legacy_path}")
     else
-      fail "Конфликт со старой установкой или другим скилом: ${legacy_path}. Переместите его перед установкой."
+      fail "Conflict with an old installation or another skill: ${legacy_path}. Move it before installing."
     fi
   fi
 done
 
-# Сначала подготовить полную копию; временная папка скрыта от поиска скилов.
+# Prepare a complete copy first; the temporary directory is hidden from skill discovery.
 staging_dir="$(mktemp -d "${target_skills_dir}/.${bundle_name}.XXXXXX")"
 cleanup() {
   if [[ -d "${staging_dir}/previous" && ! -e "${target_bundle}" && ! -L "${target_bundle}" ]]; then
     if ! mv "${staging_dir}/previous" "${target_bundle}"; then
-      echo "Не удалось восстановить установку. Копия сохранена: ${staging_dir}/previous" >&2
+      echo "Failed to restore the installation. The backup is preserved at: ${staging_dir}/previous" >&2
       return
     fi
   fi
@@ -97,7 +97,7 @@ for skill_name in "${skill_names[@]}"; do
   cp -RL "${source_skills_dir}/${skill_name}" "${staging_dir}/next/${skill_name}"
 done
 cp "${repository_dir}/VERSION" "${repository_dir}/LICENSE" "${staging_dir}/next/"
-# Скилы в установленной папке лежат непосредственно рядом с уведомлениями.
+# Installed skill directories are located directly alongside the notices file.
 sed 's|](skills/|](|g' "${repository_dir}/THIRD_PARTY_NOTICES.md" > "${staging_dir}/next/THIRD_PARTY_NOTICES.md"
 printf '%s\n' "${bundle_name}" > "${staging_dir}/next/.installed-by"
 
@@ -109,4 +109,4 @@ for legacy_path in "${legacy_links[@]+"${legacy_links[@]}"}"; do
   rm -- "${legacy_path}"
 done
 
-echo "Установлен комплект $(cat "${target_bundle}/VERSION"): ${target_bundle} (${#skill_names[@]} скилов)"
+echo "Installed bundle $(cat "${target_bundle}/VERSION"): ${target_bundle} (${#skill_names[@]} skills)"

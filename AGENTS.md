@@ -1,14 +1,14 @@
-## Назначение
+## Purpose
 
-- Этот репозиторий содержит общие скилы и агентов Codex для агентской разработки софта.
-- Не добавляй в общие скилы названия компонентов, пути к документации, ограничения инфраструктуры и другие правила одного проекта. Такие правила должны находиться в `AGENTS.md` соответствующего проекта.
+- This repository contains shared Codex skills and agents for agent-driven software development.
+- Do not add component names, documentation paths, infrastructure constraints, or other project-specific rules to shared skills. Such rules belong in the relevant project's `AGENTS.md`.
 
-## Структура и проверка
+## Structure and Validation
 
-- Каждый скил находится в `skills/<skill-name>` и содержит `SKILL.md`.
-- Поддерживай `agents/openai.yaml` в соответствии с `SKILL.md`.
-- Каждый custom agent находится в `agents/<agent-name>.toml`. Не дублируй в нем инструкции скила, на котором он основан.
-- После изменения проверяй frontmatter и структуру штатным `quick_validate.py` из `skill-creator`.
-- Проверяй синтаксис `scripts/install.sh` командой `bash -n scripts/install.sh`.
-- Не копируй скилы и агентов в проекты. Для локального использования запускай `scripts/install.sh`, который копирует комплект в пользовательскую папку `~/.agents/skills/agents_driven_sdlc/`. После правки исходников устанавливай комплект заново.
-- Журнал `mistakes.md` хранится только локально; не добавляй его в Git.
+- Each skill lives in `skills/<skill-name>` and contains `SKILL.md`.
+- Keep `agents/openai.yaml` consistent with `SKILL.md`.
+- Each custom agent lives in `agents/<agent-name>.toml`. Do not duplicate instructions from the skill it is based on.
+- After changes, validate frontmatter and structure using the standard `quick_validate.py` from `skill-creator`.
+- Check the syntax of `scripts/install.sh` with `bash -n scripts/install.sh`.
+- Do not copy skills or agents into projects. For local use, run `scripts/install.sh`, which copies the bundle to the user directory `~/.agents/skills/agents_driven_sdlc/`. Reinstall the bundle after editing its sources.
+- Keep `mistakes.md` local; do not add it to Git.

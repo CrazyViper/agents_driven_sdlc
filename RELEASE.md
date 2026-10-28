@@ -1,36 +1,36 @@
-# Правила выпуска
+# Release Rules
 
-## Единица версии
+## Versioning Unit
 
-Комплект включает все скилы, их `agents/openai.yaml`, референсы и установщик. Они выпускаются вместе; отдельные номера скилам не присваиваются.
+The bundle includes all skills, their `agents/openai.yaml` files, references, and the installer. They are released together; individual skills do not receive separate version numbers.
 
-[VERSION](VERSION) содержит один номер по [SemVer](https://semver.org/) без префикса `v`. Выпуск обозначается аннотированным тегом `v<номер>` на коммите с этим значением и соответствующей записью в [CHANGELOG.md](CHANGELOG.md). Номер в рабочей копии без тега ещё не означает выпущенную версию.
+[VERSION](VERSION) contains a single [SemVer](https://semver.org/) version without the `v` prefix. A release is identified by an annotated `v<version>` tag on the commit containing that value and a matching entry in [CHANGELOG.md](CHANGELOG.md). A version number in the working copy without a tag does not yet indicate a released version.
 
-Опубликованные теги и содержимое выпусков не меняются. Исправление получает новый номер; для точного воспроизведения записывай также полный SHA коммита.
+Published tags and release contents are immutable. A fix receives a new version number; also record the full commit SHA for exact reproduction.
 
-## Совместимость
+## Compatibility
 
-Контракт комплекта включает имена и условия вызова скилов, обязательные входы и результаты, статусы и передачу материалов между ролями, условия согласования, требования к инструментам и установке.
+The bundle's contract includes skill names and invocation conditions, required inputs and outputs, statuses and handoffs between roles, approval conditions, and tool and installation requirements.
 
-| Изменение | До `1.0.0` | Начиная с `1.0.0` |
+| Change | Before `1.0.0` | From `1.0.0` Onward |
 | --- | --- | --- |
-| Исправление без изменения контракта | Patch: `0.1.0 → 0.1.1` | Patch: `1.0.0 → 1.0.1` |
-| Совместимая новая возможность | Minor: `0.1.0 → 0.2.0` | Minor: `1.0.0 → 1.1.0` |
-| Несовместимое изменение контракта | Minor: `0.1.0 → 0.2.0`, с инструкцией перехода | Major: `1.0.0 → 2.0.0`, с инструкцией перехода |
+| Fix without a contract change | Patch: `0.1.0 → 0.1.1` | Patch: `1.0.0 → 1.0.1` |
+| Compatible new capability | Minor: `0.1.0 → 0.2.0` | Minor: `1.0.0 → 1.1.0` |
+| Incompatible contract change | Minor: `0.1.0 → 0.2.0`, with migration instructions | Major: `1.0.0 → 2.0.0`, with migration instructions |
 
-Правило для `0.x` принято в этом репозитории; SemVer не обещает стабильности до `1.0.0`. Версия `1.0.0` закрепляет готовность поддерживать контракт. Для предварительной проверки допустим суффикс, например `0.2.0-rc.1`.
+The `0.x` rule is a convention of this repository; SemVer does not promise stability before `1.0.0`. Version `1.0.0` signals readiness to maintain the contract. A prerelease suffix such as `0.2.0-rc.1` may be used for preliminary validation.
 
-Оценивай изменение поведения, включая `description`, условия согласования и настройки модели, независимо от размера правки текста. Новая обязательная зависимость или переименование скила считается несовместимым изменением. Версия комплекта не фиксирует версии Codex, моделей и внешних скилов; существенные изменения требований указывай в changelog.
+Assess behavioral changes, including `description`, approval conditions, and model settings, regardless of the size of the text edit. A new mandatory dependency or a renamed skill is an incompatible change. The bundle version does not pin Codex, model, or external skill versions; record material requirement changes in the changelog.
 
-## Подготовка выпуска
+## Preparing a Release
 
-1. При изменениях дополняй `Unreleased`: что изменилось для пользователя, какие есть несовместимости и как перейти. При изменении установки опиши переход и ограничения отката на старый формат.
-2. Перед выпуском выбери номер по таблице, обнови `VERSION`, перенеси накопленные записи в раздел с номером и датой `YYYY-MM-DD`, сохрани пустой `Unreleased` для следующих изменений.
-3. Проверь frontmatter и структуру всех скилов штатным `quick_validate.py`, синтаксис установщика, затронутые ссылки и согласованность `agents/openai.yaml` с инструкциями. Для изменения поведения проверь затронутый сценарий и существенный обратный случай.
-4. Проверь копирование комплекта, повторную установку, обновление, откат и переход со старых симлинков командой `python3 -m unittest discover -s tests`. Проверки используют временные каталоги через `AGENTS_SKILLS_DIR`; чужие файлы при конфликте должны сохраняться.
-5. Просмотри diff и закоммить только файлы выпуска. `mistakes.md` и служебные отчёты в коммит не входят. После коммита создай тег на проверенном состоянии.
+1. Update `Unreleased` as changes are made: describe user-visible changes, incompatibilities, and migration steps. When installation changes, describe migration and the limits of rolling back to the old format.
+2. Before release, choose a version using the table, update `VERSION`, and move accumulated entries into a section with the version and date in `YYYY-MM-DD` format. Leave an empty `Unreleased` section for future changes.
+3. Validate frontmatter and structure for all skills using the standard `quick_validate.py`; check installer syntax, affected links, and consistency between `agents/openai.yaml` and the instructions. For a behavioral change, check the affected scenario and a meaningful opposite case.
+4. Test bundle copying, reinstallation, updates, rollback, and migration from old symlinks with `python3 -m unittest discover -s tests`. The tests use temporary directories through `AGENTS_SKILLS_DIR`; unrelated files must be preserved when conflicts occur.
+5. Review the diff and commit only release files. Do not include `mistakes.md` or temporary operational reports in the commit. After committing, create a tag on the verified state.
 
-Для структурной проверки нужны Python 3 с PyYAML и установленный `skill-creator`. Команды из корня репозитория; если скил установлен в другом месте, укажи его фактический путь в `validator`:
+Structural validation requires Python 3 with PyYAML and an installed `skill-creator`. Run these commands from the repository root; if the skill is installed elsewhere, set `validator` to its actual path:
 
 ```bash
 (
@@ -44,9 +44,9 @@
 )
 ```
 
-## Тег и публикация
+## Tagging and Publishing
 
-Выполняй после коммита файлов выпуска. Рабочее дерево должно быть чистым; посторонние незакоммиченные файлы сохрани вне него или используй отдельный чистый worktree. Проверь, что раздел changelog совпадает с `VERSION`.
+Run these steps after committing the release files. The working tree must be clean; preserve unrelated uncommitted files outside it or use a separate clean worktree. Check that the changelog section matches `VERSION`.
 
 ```bash
 (
@@ -58,10 +58,10 @@
 )
 ```
 
-Для публикации сначала отправь релизный коммит в согласованную ветку, затем только нужный тег:
+To publish, first push the release commit to the agreed branch, then push only the intended tag:
 
 ```bash
 git push origin "refs/tags/v$(cat VERSION)"
 ```
 
-Не используй принудительную перезапись тега. Установку выполняй по [README](README.md#быстрый-старт) между задачами, чтобы участники одной задачи использовали один комплект.
+Do not force-overwrite a tag. Follow the [README](README.md#quick-start) to install between tasks so that all participants in a task use the same bundle.

@@ -36,7 +36,7 @@ class InstallTests(unittest.TestCase):
         )
         if success:
             self.assertEqual(result.returncode, 0, result.stderr)
-            self.assertIn("Установлен комплект", result.stdout)
+            self.assertIn("Installed bundle", result.stdout)
         else:
             self.assertNotEqual(result.returncode, 0, result.stdout)
         self.assertEqual(list(self.target.glob(".agents_driven_sdlc.*")), [])
