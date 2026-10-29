@@ -4,6 +4,10 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 
 ## [Unreleased]
 
+## [1.0.3] - 2026-10-29
+
+- CR summaries now include the main test scenarios planned for implementation as the sixth section, before the document package. Each scenario is a single plain-language sentence stating what the test will check.
+
 ## [1.0.2] - 2026-10-29
 
 - CR summaries now explicitly highlight new dependencies between internal components and on external libraries, frameworks, or services in the Changes and Stages sections, naming the dependent component, its dependency, and the purpose.

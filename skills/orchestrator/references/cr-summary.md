@@ -7,7 +7,8 @@ Save the summary under the [material storage rules](material-storage.md) and lin
 3. **Changes:** create a concise but complete nested numbered list: repository, component, change. Describe the substance of each change in one short, informative sentence. A component's only change may be written after its name and a colon.
 4. **Stages:** repeat the same change wording in a nested numbered list: stage, component, change. Check that both lists contain the same changes.
 5. **Key diagrams:** show an overview diagram and diagrams with changes marked, without a stage diagram.
-6. **Artifacts:** end the summary with relative links only to the main current CR documents. Do not list supporting files or run materials in the summary.
+6. **Test scenarios:** include only a numbered list of the main test scenarios planned for implementation. Describe each scenario in one short sentence in plain language stating exactly what the test will check.
+7. **Artifacts:** end the summary with relative links only to the main current CR documents. Do not list supporting files or run materials in the summary.
 
 ## Summary Writing Requirements
 
