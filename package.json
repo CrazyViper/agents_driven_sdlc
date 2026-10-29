@@ -1,6 +1,6 @@
 {
   "name": "agents-driven-sdlc",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Install the agent-driven SDLC skill bundle for Codex.",
   "license": "MIT",
   "repository": {
