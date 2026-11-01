@@ -4,6 +4,10 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 
 ## [Unreleased]
 
+## [1.0.4] - 2026-11-01
+
+- UX refinements now start from an exact copy of the interface as implemented at design time, preserving existing component styles and functionality outside the requested changes.
+
 ## [1.0.3] - 2026-10-29
 
 - CR summaries now include the main test scenarios planned for implementation as the sixth section, before the document package. Each scenario is a single plain-language sentence stating what the test will check.
