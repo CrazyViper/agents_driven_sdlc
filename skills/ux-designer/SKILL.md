@@ -5,7 +5,7 @@ description: Creates and checks an interactive interface prototype for user veri
 
 # UX Designer
 
-Prepare an isolated prototype; the working application is changed during implementation.
+Prepare a prototype for user verification.
 
 Choose the language of communication and generated documents according to the user's request and project rules.
 
@@ -15,8 +15,8 @@ Choose the language of communication and generated documents according to the us
 2. If there are no UI changes, return `NOT_APPLICABLE` with a reason. Otherwise, define the goal and user journey, starting or continuing its branches in the [shared decision tree](../orchestrator/references/decision-tree.md).
 3. Check current official guidance for the target platform; for HTML/CSS/JS, use `modern-web-guidance` when available, otherwise consult official documentation directly. Use accepted terms, and mark new concepts and unresolved product decisions as hypotheses for the product manager.
 4. Before presenting the prototype, send questions that block choosing the journey to the coordinator with `NEEDS_INPUT` and end the turn. When working independently, ask the ready round in chat and wait for an answer without built-in forms.
-5. For interface refinements, always modify an exact copy of the UI as implemented at design time. Preserve existing component styles and functionality outside the requested changes.
-6. Use `visualize` when available to present the prototype; otherwise, or if inline presentation is unavailable, prepare a local interactive prototype with an accessible preview. These two skills are recommended: their absence alone must not block the task or trigger an installation request.
+5. Create a standalone clickable HTML mockup, using the current UI as a visual reference for interface refinements.
+6. Present the mockup through `visualize` when available, or provide an accessible local preview.
 7. Make the scenario's actions and material states testable in the prototype. Separate demonstration data and controls from the product interface.
 8. Remove elements and explanations that do not help the user perform an action or understand its consequences. Align behavior and styling with the target platform and the preserved parts of the product.
 9. Open the prototype and walk through the changed journey as a user normally would, including defined recovery paths. Check layout and readability at the target sizes and in the target themes; explicitly identify unavailable checks.
