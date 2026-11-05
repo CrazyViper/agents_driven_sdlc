@@ -1,4 +1,4 @@
 interface:
   display_name: "Orchestrator"
-  short_description: "Manages CR preparation and execution of the approved plan"
-  default_prompt: "Use $orchestrator to prepare the CR package and implement it after my approval. Ask questions only in chat and stop work until I answer."
+  short_description: "Coordinates compact or full CR design and implementation"
+  default_prompt: "Use $orchestrator to choose a proportionate CR route and implement the agreed scope using applicable approvals. Ask questions only in chat and stop work until I answer."

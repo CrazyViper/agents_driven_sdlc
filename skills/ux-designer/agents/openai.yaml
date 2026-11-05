@@ -1,4 +1,4 @@
 interface:
   display_name: "UX Designer"
-  short_description: "Prepares an interactive prototype for user verification"
-  default_prompt: "Use $ux-designer to prepare and check a prototype while preserving decisions in the shared CR tree."
+  short_description: "Defines UI changes and prototypes needed for verification"
+  default_prompt: "Use $ux-designer to define the UI delta from accepted materials or prepare a checked prototype when new user verification is needed."

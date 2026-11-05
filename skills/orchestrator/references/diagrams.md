@@ -2,6 +2,8 @@
 
 Follow the [material storage rules](material-storage.md) for diagrams, visual verification files, and diagnostics.
 
+Create a diagram only when it clarifies a material decision or dependency beyond sufficient existing materials or concise text. A local change does not require new diagrams; the workflow below applies to diagrams actually needed in the package.
+
 ## Workflow
 
 1. Choose the question the diagram should explain, and show the affected part with the necessary adjacent connections. Reuse a sufficient canonical diagram by linking to it.

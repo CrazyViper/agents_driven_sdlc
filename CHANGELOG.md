@@ -4,6 +4,13 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 
 ## [Unreleased]
 
+## [1.1.2] - 2026-11-05
+
+- Small local changes use a compact CR and separate summary in one package folder, reusing accepted design and UI materials. A single small stage needs one final code review.
+- Requirements and verification follow agreed obligations and the actual effects of changed code. Additional UI observations do not become acceptance blockers, and unchanged external actions can be checked at their call boundary.
+- Fixes retain the existing acceptance criteria and applicable test results. Documentation changes, new reviewers, and stage transitions alone do not require repeating product tests.
+- Scenario analysis covers new paths to existing goals and standalone descriptions of current behavior. Short summaries require prototype images and diagrams only when needed for agreed verification.
+
 ## [1.1.1] - 2026-11-05
 
 - The orchestrator and UX designer no longer require reading mistake records before starting work.
