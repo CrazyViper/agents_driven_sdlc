@@ -1,4 +1,4 @@
 interface:
   display_name: "Solution Reviewer"
-  short_description: "Checks the full CR package and its readiness for approval"
-  default_prompt: "Use $review-solution to review the full CR package with its plan and provide a reasoned verdict."
+  short_description: "Checks CR design and planning for readiness for approval"
+  default_prompt: "Use $review-solution to review the CR design and plan for the chosen route and provide a reasoned verdict."
