@@ -9,6 +9,8 @@ Coordinate work in the main agent; delegate subject-specific decisions, reviews,
 
 Choose the language of communication and generated documents according to the user's request and project rules.
 
+Maintain one authoritative release notes block in the [Markdown CR summary](references/cr-summary.md).
+
 ## Prepare the Work
 
 1. Read project rules, relevant mistake records, the request, and user decisions already made. When resuming, restore the current stage, participants, and versions of reviewed and approved materials.
@@ -30,13 +32,13 @@ Launch participants with `fork_turns: none`, respecting explicit user settings. 
 ## Prepare and Present the Package
 
 1. For changed UI, invoke [$ux-designer](../ux-designer/SKILL.md), show the checked prototype, and obtain verification of the specific version before preparing the full product brief; a blocking product question may be sent to the product manager earlier. If there are no UI changes, record the reason for skipping this step.
-2. Give the task, confirmed prototype, and shared tree to [$define-product-change](../define-product-change/SKILL.md). Obtain a CR with the goal, scope, accepted domain model, and chosen approach.
+2. Give the task, confirmed prototype, and shared tree to [$define-product-change](../define-product-change/SKILL.md). Obtain draft release notes alongside the CR with the goal, scope, accepted domain model, and chosen approach.
 3. Give the product brief to [$develop-user-scenarios](../develop-user-scenarios/SKILL.md). Obtain scenarios and verifiable functional and non-functional requirements (FRs/NFRs).
 4. Give the product brief and requirements to [$design-project-architecture](../design-project-architecture/SKILL.md). Obtain the architecture, contracts, and map of specific files to change.
 5. Give the package to [$design-test-scenarios](../design-test-scenarios/SKILL.md), then return the result to the architect. Before planning, obtain a map that accounts for necessary changes to tests, data, and the environment.
 6. Give the completed map and checks to [$plan-change-implementation](../plan-change-implementation/SKILL.md). Obtain a plan covering the entire scope in verifiable stages.
 7. Give the original request, user decisions, and entire package to a separate [$review-solution](../review-solution/SKILL.md) agent who did not participate in authorship. Return findings to the owners and obtain a follow-up review of corrections.
-8. After `ACCEPT`, create a separate Markdown summary file in the CR package under the [summary requirements](references/cr-summary.md) and show it to the user.
+8. After `ACCEPT`, create a separate Markdown [summary](references/cr-summary.md) in the CR package with the draft release notes and show it to the user for plan approval.
 9. Obtain the user's authorization to implement this package version without intermediate document approvals, and follow the [execution instructions](references/execution.md). When continuing an approved version, use the authorization already given.
 
 ## Resolve Questions and Returns

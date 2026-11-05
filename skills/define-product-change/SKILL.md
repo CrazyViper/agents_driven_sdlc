@@ -19,6 +19,7 @@ Choose the language of communication and generated documents according to the us
 6. Verify the technology properties that the decision depends on against current official sources. Preserve the rationale and any unknowns that could change the decision.
 7. Show the scope of the change and the affected domain model using the [diagram rules](../orchestrator/references/diagrams.md). Keep material rationale and constraints below the diagrams, and link definitions to the glossary.
 8. Record the product brief in the CR under the [material storage rules](../orchestrator/references/material-storage.md) and link it to the prototype, tree, and canonical materials. Hand off the current version, chosen approach, and open questions with their dependent decisions to the coordinator.
+9. Send the orchestrator draft release notes with the product brief, using terms the product's end users understand to describe the changes or stating that there are no user-visible changes.
 
 ## Rework
 
