@@ -11,7 +11,7 @@ Choose the language of communication and generated documents according to the us
 
 ## Workflow
 
-1. Read the request, user decisions, project rules, and relevant mistake records. Study the current implementation or, for a new interface, the supplied prototype.
+1. Read the request, user decisions, and project rules. Study the current implementation or, for a new interface, the supplied prototype.
 2. If there are no UI changes, return `NOT_APPLICABLE` with a reason. Otherwise, define the goal and user journey, starting or continuing its branches in the [shared decision tree](../orchestrator/references/decision-tree.md).
 3. Check current official guidance for the target platform; for HTML/CSS/JS, use `modern-web-guidance` when available, otherwise consult official documentation directly. Use accepted terms, and mark new concepts and unresolved product decisions as hypotheses for the product manager.
 4. Before presenting the prototype, send questions that block choosing the journey to the coordinator with `NEEDS_INPUT` and end the turn. When working independently, ask the ready round in chat and wait for an answer without built-in forms.
