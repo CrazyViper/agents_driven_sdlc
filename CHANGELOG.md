@@ -4,6 +4,10 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 
 ## [Unreleased]
 
+## [1.1.0] - 2026-11-05
+
+- CR summaries now keep release notes between Goal and Outcome, and the orchestrator presents the verified notes with the completed result for one final user acceptance.
+
 ## [1.0.5] - 2026-11-03
 
 - UX prototypes now use standalone clickable HTML mockups, with the current interface as a visual reference for refinements.

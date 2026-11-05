@@ -41,6 +41,7 @@ The orchestrator studies the project, asks questions to clarify the task, and ta
 1. First, it prepares a prototype and shows it to you for approval. This stage is skipped for tasks without interface changes.
 2. After you approve the prototype, it prepares the detailed design and implementation plan, then presents them for separate approval.
 3. Only after you explicitly approve the solution and plan does it proceed with implementation, checks, and reviews.
+4. After the final internal review, it shows the result, the full release notes, and a link to the CR summary, then asks you to accept the result and notes together.
 
 The prototype and plan can be revised based on your feedback as many times as needed. The orchestrator moves to the next stage once you are satisfied with the result and approve it.
 
