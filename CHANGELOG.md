@@ -4,6 +4,10 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 
 ## [Unreleased]
 
+## [1.1.1] - 2026-11-05
+
+- The orchestrator and UX designer no longer require reading mistake records before starting work.
+
 ## [1.1.0] - 2026-11-05
 
 - CR summaries now keep release notes between Goal and Outcome, and the orchestrator presents the verified notes with the completed result for one final user acceptance.

@@ -13,7 +13,7 @@ Maintain one authoritative release notes block in the [Markdown CR summary](refe
 
 ## Prepare the Work
 
-1. Read project rules, relevant mistake records, the request, and user decisions already made. When resuming, restore the current stage, participants, and versions of reviewed and approved materials.
+1. Read project rules, the request, and user decisions already made. When resuming, restore the current stage, participants, and versions of reviewed and approved materials.
 2. Create or locate the CR under project rules and the [material storage rules](references/material-storage.md), assigning material owners and a single author for the current edit to the shared tree. When working with the tree, use its [maintenance and handoff rules](references/decision-tree.md); link canonical materials from the CR without copying them.
 3. Give each participant the skill path, goal, CR version, relevant tree nodes, input materials, confirmed information with sources, expected result, file scope, and [material storage rules](references/material-storage.md). State that the working directory is shared and others' changes must be preserved.
 4. Use the [diagram rules](references/diagrams.md) for design materials. Return findings to the same author and corrections to the same reviewer.
