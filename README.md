@@ -65,6 +65,14 @@ Subagent types, models, and reasoning effort levels are listed under "Default la
 
 Use the [decision tree](skills/orchestrator/references/decision-tree.md) when working through alternatives, the [concept guidance](skills/define-product-change/references/concepts.md) when clarifying terms, and the [decision record guidance](skills/design-project-architecture/references/decision-records.md) for architectural decisions that are hard to reverse. Apply these instructions as needed for the task.
 
+## Use Cases
+
+These products are developed using the skills in this repository.
+
+- [Video Transcription](https://videotranscription.tech/): a Chrome extension that transcribes audio from the current tab with timestamps and exports transcripts as Markdown or plain text.
+- [TranscribePad](https://transcribepad.tech/): a macOS app that records microphone and system audio, transcribes meetings locally, and combines transcripts with notes and AI summaries.
+- **Shared backend**: a common server for both products with monitoring dashboards configured. It was also developed using this skill bundle.
+
 ## Versioning and Change History
 
 - The shared bundle version is stored in [VERSION](VERSION).
