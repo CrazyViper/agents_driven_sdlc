@@ -20,14 +20,21 @@ Maintain one authoritative release notes block in the [Markdown CR summary](refe
 
 Default launch settings:
 
-| Participant | Type | Model | Reasoning Effort |
-| --- | --- | --- | --- |
-| Package authors and solution reviewer | `default` | `gpt-6.1-sol` | `xhigh` |
-| Implementer | `worker` | `gpt-6.1-sol` | `xhigh` |
-| Code reviewer | `default` | `gpt-6.1-sol` | `xhigh` |
-| Mediator | `default` | `gpt-6.1-sol` | `xhigh` |
+| Role | Agent type | Model | Reasoning effort | Rationale |
+| --- | --- | --- | --- | --- |
+| Orchestrator | Main chat | `gpt-6.2-astra` | `ultra` | Chooses the route and tracks approvals and open decisions across stages. |
+| UX designer | `default` | `gpt-6.2-sol` | `ultra` | Builds the interactive prototype when needed and checks what users see after each action. |
+| Product manager | `default` | `gpt-6.2-sol` | `ultra` | Defines the goal and scope and identifies assumptions that affect downstream work. |
+| Requirements analyst | `default` | `gpt-6.2-sol` | `ultra` | Resolves ambiguities in user scenarios and writes verifiable requirements. |
+| Architect | `default` | `gpt-6.2-astra` | `ultra` | Traces the impact of design choices on contracts, data, and existing callers. |
+| Test scenario designer | `default` | `gpt-6.2-sol` | `ultra` | Identifies edge cases and checks which ones existing tests already cover. |
+| Implementation planner | `default` | `gpt-6.2-sol` | `ultra` | Orders the agreed changes by dependency so each stage can be verified. |
+| Solution reviewer | `default` | `gpt-6.2-astra` | `ultra` | Checks the requirements, architecture, and plan for conflicts with each other and with the request. |
+| Implementer | `worker` | `gpt-6.2-sol` | `ultra` | Implements the approved stage and verifies the behavior existing callers rely on. |
+| Code reviewer (stage and final) | `default` | `gpt-6.2-astra` | `ultra` | Checks how the diff affects existing callers and data, including paths outside the edited files. |
+| Mediator | `default` | `gpt-6.2-astra` | `ultra` | Compares the evidence for each position and tests the assumption behind the disagreement. |
 
-Launch participants with `fork_turns: none`, respecting explicit user settings. Resolve unavailable or ambiguous launch parameters with the user without silently substituting them.
+Launch subagents with `fork_turns: none`, respecting explicit user settings. Resolve unavailable or ambiguous launch parameters with the user without silently substituting them.
 
 ## Choose the Route
 
