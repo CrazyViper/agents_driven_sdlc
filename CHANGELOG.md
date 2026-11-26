@@ -4,6 +4,10 @@ All skills are released as one bundle. Its version is stored in [VERSION](VERSIO
 
 ## [Unreleased]
 
+## [1.1.4] - 2026-11-26
+
+- Changed the default reasoning effort from `ultra` to `max` for all 11 roles in the orchestrator's launch settings.
+
 ## [1.1.3] - 2026-11-21
 
 - The orchestrator now lists model defaults for each of the 11 roles. The main orchestrator, architect, solution reviewer, code reviewer, and mediator use `gpt-6.2-astra`. The UX designer, product manager, requirements analyst, test scenario designer, implementation planner, and implementer use `gpt-6.2-sol`. All roles use `ultra` reasoning effort by default.
